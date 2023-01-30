@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+<body style="
+    height: 3000px;
+    padding-top: 50px; 
+    padding-left: 80px;
+"> <!-- Quando meu elemento fica fico, como o Header, ele por padrão carrega por cima dos meus elementos, para prevenir isso de ocorrer, eu dou um padding top, para ele não comer o conteúdo. -->
+    <div style="
+        background-color: black;
+        color: white;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        height: 40px;
+        z-index: 1;
+    ">Header</div>
+
+    <div style="
+        background-color: green;
+        color: white;
+        position: fixed;
+        left: 0;
+        top: 40px;
+        bottom: 0px;
+        width: 72px;
+    ">side bar
+        <div style="
+            position: absolute;
+            background-color: red;
+            color: white;
+            right: 10px;
+        "> <!-- Quando meu ABSOLUTE fica dentro do meu FIXED, todas as instruções de direções que eu lhe der, serão correspondidas dentro da caixa, e não na tela inteira. -->
+            absolute
+    </div>
+    </div> <!-- z-index: 0(padrão); Porém quando colocado o valor(geralmente o número maior, por poder ser usado em mais de uma caixa.), estou dizendo que independente do que esteja acima a esse elemento, esté irá prevalecer. -->
+
+    <div style="
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 50px;
+        top: 150px;
+    ">
+        absolute
+    </div>
+
+
+    <div style="
+        background-color: lightblue;
+        height: 200px;
+        width: 200px;
+        position: static;
+    ">div 1</div>
+
+    <div style="
+        background-color: lightpink;
+        height: 200px;
+        width: 200px;
+        position: relative;
+    ">
+    div 2
+        <div style="
+            position: absolute;
+            background-color: black;
+            color: white;
+            right: 10px;
+            bottom: 10px
+        ">
+        5:00
+        </div>
+    </div>
+</body>
+</html>

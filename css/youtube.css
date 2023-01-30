@@ -1,0 +1,90 @@
+.thumb {
+    width: 100%;
+}
+
+
+.thumb-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+
+.video-timer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-weight: 500;
+    right: 10px;
+    bottom: 10px;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 4px 4px;
+}
+
+
+.vid-tittle {
+    font-weight: 500;
+    margin: 0px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    width: 100%;
+    font-weight: 500;
+}
+
+
+.vid-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+
+.channel-name, 
+.vid-stats {
+    color: #606060;
+    font-size: 12px;
+}
+
+
+.channel-name {
+    margin-bottom: 5px;
+}
+
+
+.vid-info {
+    width: 370px;
+}
+
+
+.profile-pic {
+    width: 36px; /* A melhor maneira de fitar uma imagem em uma caixa aonde ela ocupa pouco, mas quer que ocupe todo o espaço, é usar %. Válido para diversos casos, porém vale a ressalva. Ela basicamente ocupara os 50px que eu setei no meu layout horizontal. */
+    border-radius: 50px;
+}
+
+.vid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+
+@media (max-width: 750px) {
+    .vid-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 751px) and (min-width: 999px) {
+    .vid-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .vid-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

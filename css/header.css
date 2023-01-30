@@ -1,0 +1,181 @@
+nav {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom: 1px solid #dedede;
+    z-index: 100;
+}
+
+
+.left-section {
+    align-items: center;
+    display: flex;
+}
+
+
+.hamburguer-menu {
+    height: 24px;
+    margin: 0px 24px;
+    cursor: pointer;
+}
+
+
+.youtube-logo {
+    width: 80%;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+.middle-section {
+    flex: 1; /* Pegará todo espaço disponivel, seja grande ou curto. */
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 470px;
+    display: flex;
+    align-items: center;
+/*  flex-direction: row; - Para o caso de eu optar por mudar a diração das linhas, ela por padrão é ROW. */
+}
+
+
+.search-bar {
+    flex: 1;
+    height: 40px;
+    font-size: 1em;
+    padding-left: 12px;
+    border: 1px solid #cccccc;
+    box-shadow: inset 0px 1px 2px #eeeeee; /* Inset faz com que a sombra fique dentro do elemento, e não fora. */
+    border-radius: 2px;
+    width: 0; /* Por padrão, toda barra tem um width já definido, e quando encolho a tela e ele bate esse limite, ficará dificil de outras caixas se encolherem, e com está barra estando flexivel, ela não atrapalhará. */
+}
+
+
+.search-bar::placeholder { 
+    font-size: 1em; /* Essa pseudo-classe faz com que eu chame o placeholder da minha barra, neste caso o " Search ". */
+    font-weight: 500;
+}
+
+
+.voice-search {
+    height: 44px;
+    width: 44px;
+    border-radius: 22px; /* Curiosidade, se o valor ser a exata metade do tamanho e largura, ele ficará perfeitamente redondo. */
+    border: none;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+
+.voice-search-icon {
+    height: 25px;
+}
+
+
+.search-bttn {
+    height: 44px;
+    width: 65px;
+    background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+    margin-left: -1px; /* Dar um valor negativo faz com que ele puxe para si, não longe de si. */
+    margin-right: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+}
+
+
+.search-icon {
+    height: 25px;
+}
+
+
+.search-bttn,
+.voice-search,
+.upload-icon-container,
+.youtube-apps-container,
+.notification-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search-bttn > .tooltip,
+.voice-search > .tooltip,
+.upload-icon-container > .tooltip,
+.youtube-apps-container > .tooltip,
+.notification-icon-container > .tooltip {
+    position: absolute;
+    background-color: rgba(110, 109, 109, 0.959);
+    color: white;
+    padding: 8px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -35px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none; /* Para dizer que não irá acontecer nada, quando fica sem essa propriedade, meu tooltip é clicavél, e não queremos isso. */
+    white-space: nowrap; /* Para o texto não ser quebrado. */
+}
+
+.upload-icon-container > .tooltip,
+.youtube-apps-container > .tooltip,
+.notification-icon-container > .tooltip {
+    bottom: -45px;
+}
+
+/* /\ Essa classe de cima com a de baixo combinam com um hover para aparecer o elemento que eu quero quando o mouse é passado por cima, com o opacity, eu consigo esconder e mostrar o botão quando quiser.\/    */
+
+.search-bttn:hover > .tooltip,
+.voice-search:hover > .tooltip,
+.upload-icon-container:hover > .tooltip,
+.youtube-apps-container:hover > .tooltip,
+.notification-icon-container:hover > .tooltip { 
+    opacity: 1;
+}
+
+
+.right-section {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 24px 0px 0px;
+    flex-shrink: 0; /* Quando minha flexbox começar a diminuir, ao invés de ela se "shrink-encolher", ela irá manter meu width. */
+
+}
+
+
+.upload-icon,
+.youtube-apps-icon,
+.notification-icon {
+    width: 24px;
+    cursor: pointer;
+}
+
+
+.notification-counter {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(197, 40, 40);
+    border-radius: 10px;
+    font-size: 10px;
+    color: white;
+    padding: 2px 5px;
+}
+
+
+.user-picture {
+    width: 35px;
+    height: 35px;
+    border-radius: 17px;
+    cursor: pointer;
+}

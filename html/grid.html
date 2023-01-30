@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid's</title>
+    <style>
+        .box {
+            display: grid;
+            grid-template-columns: 100px 100px 200px;/* O número de valore determina os números de colunas; e o valor por si mesmo já diz o tamanho em que ela deve estar, ou seja, se eu deixar 5 valores aqui, serão 5 colunas, e cada com o tamanho que eu atribuir a ela. Sempre que eu fizer mais div's do que colunas, ele começa a quebrar, e criar novas linhas. */
+            margin-top: 15px; 
+        }
+    </style>
+</head>
+<body style="margin-bottom: 1000px;">
+    <div class="box"> 
+        <div style="background-color: lightskyblue;">div 1</div>
+        <div style="background-color: lightpink;">div 2 <p>text</p></div>
+    </div>
+    
+    <div class="box"> 
+        <div style="background-color: lightskyblue;">div 1</div>
+        <div style="background-color: lightpink;">div 2 <p>text</p></div>
+    </div>
+
+    <div class="box"> 
+        <div style="background-color: lightskyblue;">div 1</div>
+        <div style="background-color: lightpink;">div 2 <p>text</p></div>
+        <div style="background-color: lightgray;">div 3</div>
+        <div style="background-color: lightblue;">div 4</div>
+    </div>
+
+    <div style="
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 100px 1fr;"> 
+        <div style="background-color: lightskyblue;">100px</div>
+        <div style="background-color: lightpink;">1fr</p></div>
+    </div>
+
+    <div style="
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 100px 1fr 1fr;"> 
+        <div style="background-color: lightskyblue;">100px</div>
+        <div style="background-color: lightpink;">1fr</p></div>
+        <div style="background-color: lightskyblue;">1fr</div>
+    </div>  
+    
+    <div style="
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 100px 1fr 2fr;"> 
+        <div style="background-color: lightskyblue;">100px</div>
+        <div style="background-color: lightpink;">1fr</p></div>
+        <div style="background-color: lightskyblue;">2fr</div>
+    </div>
+
+    <div style="
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px; 
+    row-gap: 40px;"> <!-- FR é uma sigla do grid que significa, Free Space, ou seja, pegará todo o espaço livre disponível. -->
+        <div style="background-color: lightskyblue; height: 200px;">1fr</div>
+        <div style="background-color: lightpink; height: 200px;">1fr</p></div>
+        <div style="background-color: lightskyblue; height: 200px;">1fr</div>
+        <div style="background-color: lightpink; height: 200px;">1fr</p></div>
+    <div style="background-color: lightskyblue; height: 200px;">1fr</div>
+        <div style="background-color: lightpink; height: 200px;">1fr</p></div>
+    </div>
+
+
+</body>
+</html>

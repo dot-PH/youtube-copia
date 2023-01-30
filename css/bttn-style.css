@@ -1,0 +1,95 @@
+#subscribe {
+    background-color: red;
+    color: white;
+    font-size: 1.4em;
+    padding: 13px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+#subscribe:hover {
+    opacity: 0.6;
+    /* Opacidade da letra quando passo o mouse por cima. */
+}
+
+
+#subscribe:active {
+    opacity: 0.3;
+    /* Active é a ação que ocorre ao apertar o botão. */
+}
+
+
+#join {
+    background-color: white;
+    font-size: 1.4em;
+    color: rgb(41, 118, 211);
+    border-color: blue;
+    padding: 13px;
+    width: 90px;
+    border-radius: 50px;
+    border-width: 1px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    /* Eu primeiro digo em que quero fazer a transição, e quanto tempo vai levar. É possível declarar mais de uma propriedade. Um pecado que cometi que vale a pena destacar é quando colocar essa propriedade no hover, ela irá ser aplicada apenas com o mouse em cima, por isso que quando tira, ele abruptamente cancela a transição. */
+}
+
+
+#join:hover {
+    background-color: rgb(41, 118, 211);
+    color: white;
+
+}
+
+
+#join:active {
+    opacity: 0.6;
+}
+
+
+#tweet {
+    background-color: rgb(68, 137, 180);
+    padding: 13px;
+    width: 90px;
+    margin-left: 10px;
+    font-size: 1.4em;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+
+#tweet:hover {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+/* 
+.stretch-button {
+background-color: green;
+color: white;
+border: none;
+font-size: 18px;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 15px;
+padding-right: 15px;
+cursor: pointer;
+transition: padding-top 1s,
+padding-bottom 1s,
+padding-left 1s,
+padding-right 1s;
+}
+
+.stretch-button:hover {
+padding-top: 18px;
+padding-bottom: 18px;
+padding-left: 36px;
+padding-right: 36px;
+}
+*/

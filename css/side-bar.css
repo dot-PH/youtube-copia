@@ -1,0 +1,37 @@
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0px;
+    top: 55px;
+    bottom: 0;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+}
+
+
+.side-bar-link {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Quando a direção da minha caixa é coluna, os elementos align e flex-direction são invertidos. */
+}
+
+
+.side-bar-link:hover {
+    background-color: rgb(236, 233, 233);
+    cursor: pointer;
+}
+
+
+.side-bar-link > img {
+    height: 24px;
+    margin-bottom: 6px;
+}
+
+
+.side-bar-link > div {
+    font-size: 10px;
+}
